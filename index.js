@@ -3,6 +3,8 @@ const app = express();
 
 const db = require('./db/db');
 
+app.use('/', express.static(`${__dirname}/client/build`))
+
 app.get('/data', (req, res) => {
   res.json(JSON.parse(JSON.stringify(db)))
 });
