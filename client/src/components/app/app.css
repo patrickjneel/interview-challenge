@@ -1,0 +1,68 @@
+* {
+   font-family: 'Roboto Mono', monospace;
+}
+
+.welcome-screen {
+  align-items: center;
+  background: url('../../assets/building.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh; 
+  opacity: 0.80;
+}
+
+.charts {
+  background-color: #b5c4d1;
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  opacity: 0.90;
+}
+
+.top-app {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 72px;
+  font-weight: 700;
+  margin: auto;
+}
+
+.desc {
+  color: #f5f7f8;
+  font-weight: 300;
+  margin: auto;
+}
+
+.bottom-app {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 110px;
+}
+
+.data-desc {
+  color: #efefef;
+  font-weight: 300;
+}
+
+.data-desc:hover {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #f7941d;
+}
+
+.logo {
+  height: 50px;
+  width: 75px;
+}
+
+
+
+
