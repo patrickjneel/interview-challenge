@@ -34,6 +34,7 @@ class App extends Component {
             <img className='logo' src={require('../../assets/creative.svg')} />
             <h3 className='data-desc' onClick={this.scroll}>View Tablet Data</h3>
           </div>
+          <h3 className='data-desc' onClick={this.scroll}>View Comparison Data</h3>
         </div>
         <div className='charts'>
           <ChartArea data={this.state.data} />

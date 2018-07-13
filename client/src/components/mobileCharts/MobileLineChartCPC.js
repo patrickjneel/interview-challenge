@@ -51,7 +51,7 @@ let options = {
   ],
 };
   return (
-   <div>
+   <div className='chart-container'>
      <HighchartsReact 
        highcharts={Highcharts}
        options={options}

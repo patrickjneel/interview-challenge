@@ -1,10 +1,15 @@
 import React from 'react';
-import MobileLineChart from '../mobileCharts/MobileLineChart';
+import MobileLineChartCPC from '../mobileCharts/MobileLineChartCPC';
+import MobileBarChartMax from '../mobileCharts/MobileLineChartMax';
 import './chart-area.css';
 
 
 const ChartArea = ({data}) => {
-  console.log(data)
+
+ let mobileData = data.filter(mobile => mobile.device === 'Mobile devices with full browsers')
+let hour = mobileData.map(hour => hour.hourOfDay).reverse()
+let maxImpressions = mobileData.map(mobile => mobile.maxImpressions).reverse()
+
   if(!data.length) {
     return <div>loading</div>
   }
@@ -13,7 +18,8 @@ const ChartArea = ({data}) => {
       <h3>Day: {data[0].dayOfWeek}</h3>
       <h3>Event: {data[0].campaignName}</h3>
       <h3>Device: {data[18].device}</h3>
-      <MobileLineChart data={data} />
+      <MobileLineChartCPC data={data} />
+      <MobileBarChartMax hours={hour} max={maxImpressions} />
     </div>
   );
 };
