@@ -45,7 +45,7 @@ const MobileChartMax = ({ hours, max }) => {
   series: [
     {
       name: 'Max Impressions Throughout Day',
-      data: [max[0], max[1], max[2], max[3], max[4], max[5], max[6], max[7], max[8]]
+      data: max
     },
   ],
 };

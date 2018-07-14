@@ -38,14 +38,13 @@ let options = {
   plotOptions: {
     series: {
       allowPointSelect: true
-    },
-    // pointStart: 8
+    }
   },
 
   series: [
     {
       name: 'CPC Throughout Day',
-      data: [cpc[0], cpc[1], cpc[2], cpc[3], cpc[4], cpc[5], cpc[6], cpc[7], cpc[8]]
+      data: cpc
     },
   ],
 };
