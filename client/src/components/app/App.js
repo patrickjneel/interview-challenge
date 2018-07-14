@@ -17,10 +17,14 @@ class App extends Component {
   }
 
   scroll = (event) => {
-    const chart = document.querySelector('.charts')
-    // const welcome = document.querySelector('.welcome-screen')
-    chart.scrollIntoView({ behavior: "smooth", block: 'start' })
-    // welcome.scrollIntoView({ behavior: "smooth" })
+    const sectionTarget = event.target.innerText;
+
+    const sections = {
+      ['View Mobile Data']: document.querySelector('.charts'),
+      ['View Tablet Data']: document.querySelector('.tablet-view'),
+      ['View Comparison Data']: document.querySelector('.comparison-view')
+    }
+    sections[sectionTarget].scrollIntoView({ behavior: "smooth", block: 'start' })
   }
 
   render() {
@@ -45,5 +49,12 @@ class App extends Component {
     );
   };
 };
+
+//change lets to const 
+//break out chart area to smaller components
+//change color for each deifferent section
+//Put section headers
+//change chart so not much shit going on
+//table view of the data-
 
 export default App;

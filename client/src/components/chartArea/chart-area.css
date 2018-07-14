@@ -5,3 +5,14 @@
 .chart-container {
   padding: 10px 0px;
 }
+
+@media (max-width: 425px) {
+  .event-desc {
+    font-size: 15px;
+    text-align: center;
+  }
+  .data-highcharts-chart {
+    display: flex;
+    justify-content: center;
+  }
+}

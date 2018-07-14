@@ -12,14 +12,17 @@ let tabletCost = data.filter(tablet => tablet.device === 'Tablets with full brow
 
   let options = {
     chart: {
-        type: 'line'
+        type: 'line',
     },
     title: {
         text: 'Cost between Mobile Devices and Tablets'
     },
     
     xAxis: {
-        categories: hours
+        categories: hours,
+        title: {
+            text: 'Hour of Day'
+        },
     },
     yAxis: {
         title: {
@@ -31,7 +34,6 @@ let tabletCost = data.filter(tablet => tablet.device === 'Tablets with full brow
             dataLabels: {
                 enabled: true
             },
-            enableMouseTracking: false
         }
     },
     series: [{

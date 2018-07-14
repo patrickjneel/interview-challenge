@@ -3,23 +3,27 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
 const ComparisonAvgPosBar = ({ data }) => {
-console.log(data)
+
   let hours = data.map(hours => hours.hourOfDay).reverse()
+  let sortHours = data.map(hours => hours.hourOfDay).sort((a,b) => a - b)
 
 let mobileAvgPos = data.filter(mobile => mobile.device === 'Mobile devices with full browsers').map(avg => avg.avgPosition).reverse()
-
 let tabletAvgPos = data.filter(tablet => tablet.device === 'Tablets with full browsers').map(avg => avg.avgPosition).reverse()
 
+console.log(sortHours)
   let options = {
      chart: {
-        type: 'column'
+        type: 'column',
     },
     title: {
         text: 'Avgerage Position Comparison'
     },
     xAxis: {
-        categories: hours,
-        crosshair: true
+        categories: sortHours,
+        crosshair: true,
+        title: {
+            text: 'Hour of Day'
+        }
     },
     yAxis: {
         min: 0,

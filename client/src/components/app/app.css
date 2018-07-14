@@ -52,11 +52,13 @@
   color: #efefef;
   font-weight: 300;
   cursor: pointer;
+  text-decoration: underline red;
 }
 
 .data-desc:hover {
   border-color: transparent;
   box-shadow: 0 0 0 2px #f7941d;
+  text-decoration: none;
 }
 
 .data-desc:focus {
@@ -69,6 +71,27 @@
   width: 75px;
 }
 
+@media (max-width: 590px) {
+  .title {
+    font-size: 60px;
+  }
+  .desc {
+    font-size: 18px;
+  }
+}
 
-
-
+@media (max-width: 425px) {
+  .welcome-screen {
+    height: 60vh;
+  }
+  .title {
+    font-size: 55px;
+  }
+  .desc {
+    font-size: 14px;
+  }
+  .bottom-app {
+    align-items: center;
+    flex-direction: column;
+  }
+}

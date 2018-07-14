@@ -1,4 +1,4 @@
-AdCellerant Front End Code Challenge
+Pat Neel's AdCellerant challenge 
 ------------------------------------
 
 Hello!
@@ -17,9 +17,19 @@ Bonus Points for:
 - Interactive Charts
 - React/Angular 
 
-Instructions For Install
+Instructions For Running
 ------------------------
-- Fork and clone the repo
-- `npm install`
-- `npm start`
+1. Clone repository
+
+2. Install the dependencies
+
+    ```npm install```
+
+3. Start the application for development
+
+    ```npm run dev```
+
+4. Run Test suite
+    
+    ```npm test```
 

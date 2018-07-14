@@ -27,13 +27,16 @@ const ChartArea = ({data}) => {
       <h3 className='event-desc'>Day: {data[0].dayOfWeek}</h3>
       <h3 className='event-desc'>Event: {data[0].campaignName}</h3>
       <h3 className='event-desc'>Device: {data[18].device}</h3>
-      <MobileLineChartCPC data={data} hours={mobileHours} />
+      <MobileLineChartCPC className='mobile-view' data={data} hours={mobileHours} />
       <MobileBarChartMax hours={mobileHours} max={maxImpressions} />
-      <h3 className='event-desc'>Day: {data[0].dayOfWeek}</h3>
+      <h3 className='event-desc tablet-view'>Day: {data[0].dayOfWeek}</h3>
       <h3 className='event-desc'>Event: {data[0].campaignName}</h3>
       <h3 className='event-desc'>Device: {data[0].device}</h3>
       <TabletPieCost hours={tabletHours} cost={cost} />
-      <ComparisonCostLine  data={data} />
+      <h3 className='event-desc comparison-view' >Day: {data[0].dayOfWeek}</h3>
+      <h3 className='event-desc'>Event: {data[0].campaignName}</h3>
+      <h3 className='event-desc'>Comparion Between Mobile & Tablets</h3>
+      <ComparisonCostLine data={data} />
       <ComparisonAvgPosBar data={data} />
     </div>
   );
