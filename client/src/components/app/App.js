@@ -16,9 +16,12 @@ class App extends Component {
     this.setState({ data })
   }
 
-  scroll = () => {
+  scroll = (event) => {
+    console.log(event.currentTarget.name)
     const chart = document.querySelector('.charts')
+    // const welcome = document.querySelector('.welcome-screen')
     chart.scrollIntoView({ behavior: "smooth", block: 'start' })
+    // welcome.scrollIntoView({ behavior: "smooth" })
   }
 
   render() {

@@ -9,7 +9,7 @@ const MobileChartMax = ({ hours, max }) => {
     chart: {
      width: '800',
      height: '450',
-     type: 'column'
+     type: 'column',
     },
 
     title: {
@@ -30,7 +30,7 @@ const MobileChartMax = ({ hours, max }) => {
 
     xAxis: {
       title: {
-        text: 'Hour of Day'
+        text: 'Hour of Day',
     },
 
     categories: hours

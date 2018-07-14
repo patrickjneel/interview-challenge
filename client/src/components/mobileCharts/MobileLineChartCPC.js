@@ -2,10 +2,8 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-const MobileLineChart = ({data}) => {
-
+const MobileLineChart = ({ data, hours }) => {
 let mobileData = data.filter(mobile => mobile.device === 'Mobile devices with full browsers')
-let hour = mobileData.map(hour => hour.hourOfDay).reverse()
 let cpc = mobileData.map(mobile => mobile.avgCpc).reverse()
 
 let options = {
@@ -32,15 +30,16 @@ let options = {
 
   xAxis: {
     title: {
-      text: 'Hour of Day'
+      text: 'Hour of Day',
     },
-    categories: hour
+    categories: hours
   },
 
   plotOptions: {
     series: {
       allowPointSelect: true
-    }
+    },
+    // pointStart: 8
   },
 
   series: [
