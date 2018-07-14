@@ -3,6 +3,8 @@ import MobileLineChartCPC from '../mobileCharts/MobileLineChartCPC';
 import MobileBarChartMax from '../mobileCharts/MobileBarChartMax';
 import './chart-area.css';
 import TabletPieCost from '../tabletCharts/TabletPieChartClick';
+import ComparisonCostLine from '../comparisonCharts/ComparisonCostLine';
+import ComparisonAvgPosBar from '../comparisonCharts/ComparisonAvgPosBar';
 import moment from 'moment'
 
 const ChartArea = ({data}) => {
@@ -16,12 +18,7 @@ const ChartArea = ({data}) => {
   let tabletHours = tabletData.map(hour => hour.hourOfDay).reverse()
 
   let cost = tabletData.map(cost => cost.cost).reverse()
-    
-    // let hoursFormat = hours.map(hour => {
-    //   return hour > 12 ? moment(hour).format('h A') : moment(hour).format('h A')
-    // })
-    // console.log(hoursFormat)
-    
+     
   if(!data.length) {
     return <div>loading</div>
   }
@@ -36,6 +33,8 @@ const ChartArea = ({data}) => {
       <h3 className='event-desc'>Event: {data[0].campaignName}</h3>
       <h3 className='event-desc'>Device: {data[0].device}</h3>
       <TabletPieCost hours={tabletHours} cost={cost} />
+      <ComparisonCostLine  data={data} />
+      <ComparisonAvgPosBar data={data} />
     </div>
   );
 };

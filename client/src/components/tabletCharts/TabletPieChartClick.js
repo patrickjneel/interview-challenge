@@ -3,7 +3,7 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
 const TabletPieCost = ({ hours, cost }) => {
-    console.log(cost)
+
   let options = {
   chart: {
         plotBackgroundColor: null,
