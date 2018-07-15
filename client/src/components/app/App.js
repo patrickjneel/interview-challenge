@@ -18,7 +18,6 @@ class App extends Component {
   }
 
   scroll = (event) => {
-    console.log('click')
     const sectionTarget = event.target.innerText;
 
     const sections = {

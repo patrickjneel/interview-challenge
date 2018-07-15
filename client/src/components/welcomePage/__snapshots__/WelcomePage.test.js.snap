@@ -1,0 +1,394 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome Page Tests should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <WelcomePage
+    scroll={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="top-app"
+>
+          <h1
+                    className="title"
+          >
+                    ADCELLERANT
+          </h1>
+          <h2
+                    className="desc"
+          >
+                    Digital Advertising & Technology Company
+          </h2>
+</div>,
+        <div
+          className="bottom-app"
+>
+          <h3
+                    className="data-desc"
+                    onClick={[Function]}
+          >
+                    View Mobile Data
+          </h3>
+          <img
+                    className="logo"
+                    src="creative.svg"
+          />
+          <h3
+                    className="data-desc"
+                    onClick={[Function]}
+          >
+                    View Tablet Data
+          </h3>
+</div>,
+        <h3
+          className="data-desc"
+          onClick={[Function]}
+>
+          View Comparison Data
+</h3>,
+      ],
+      "className": "welcome-screen",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1
+              className="title"
+>
+              ADCELLERANT
+</h1>,
+            <h2
+              className="desc"
+>
+              Digital Advertising & Technology Company
+</h2>,
+          ],
+          "className": "top-app",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "ADCELLERANT",
+              "className": "title",
+            },
+            "ref": null,
+            "rendered": "ADCELLERANT",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Digital Advertising & Technology Company",
+              "className": "desc",
+            },
+            "ref": null,
+            "rendered": "Digital Advertising & Technology Company",
+            "type": "h2",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h3
+              className="data-desc"
+              onClick={[Function]}
+>
+              View Mobile Data
+</h3>,
+            <img
+              className="logo"
+              src="creative.svg"
+/>,
+            <h3
+              className="data-desc"
+              onClick={[Function]}
+>
+              View Tablet Data
+</h3>,
+          ],
+          "className": "bottom-app",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "View Mobile Data",
+              "className": "data-desc",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "View Mobile Data",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "logo",
+              "src": "creative.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "View Tablet Data",
+              "className": "data-desc",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "View Tablet Data",
+            "type": "h3",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "View Comparison Data",
+          "className": "data-desc",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "View Comparison Data",
+        "type": "h3",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="top-app"
+>
+            <h1
+                        className="title"
+            >
+                        ADCELLERANT
+            </h1>
+            <h2
+                        className="desc"
+            >
+                        Digital Advertising & Technology Company
+            </h2>
+</div>,
+          <div
+            className="bottom-app"
+>
+            <h3
+                        className="data-desc"
+                        onClick={[Function]}
+            >
+                        View Mobile Data
+            </h3>
+            <img
+                        className="logo"
+                        src="creative.svg"
+            />
+            <h3
+                        className="data-desc"
+                        onClick={[Function]}
+            >
+                        View Tablet Data
+            </h3>
+</div>,
+          <h3
+            className="data-desc"
+            onClick={[Function]}
+>
+            View Comparison Data
+</h3>,
+        ],
+        "className": "welcome-screen",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1
+                className="title"
+>
+                ADCELLERANT
+</h1>,
+              <h2
+                className="desc"
+>
+                Digital Advertising & Technology Company
+</h2>,
+            ],
+            "className": "top-app",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "ADCELLERANT",
+                "className": "title",
+              },
+              "ref": null,
+              "rendered": "ADCELLERANT",
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Digital Advertising & Technology Company",
+                "className": "desc",
+              },
+              "ref": null,
+              "rendered": "Digital Advertising & Technology Company",
+              "type": "h2",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3
+                className="data-desc"
+                onClick={[Function]}
+>
+                View Mobile Data
+</h3>,
+              <img
+                className="logo"
+                src="creative.svg"
+/>,
+              <h3
+                className="data-desc"
+                onClick={[Function]}
+>
+                View Tablet Data
+</h3>,
+            ],
+            "className": "bottom-app",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "View Mobile Data",
+                "className": "data-desc",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "View Mobile Data",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "logo",
+                "src": "creative.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "View Tablet Data",
+                "className": "data-desc",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "View Tablet Data",
+              "type": "h3",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "View Comparison Data",
+            "className": "data-desc",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "View Comparison Data",
+          "type": "h3",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;
