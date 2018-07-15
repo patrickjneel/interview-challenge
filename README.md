@@ -29,7 +29,11 @@ Instructions For Running
 
     ```npm run dev```
 
+4. Run application for production
+
+    ```npm run build```
+
 4. Run Test suite
     
-    ```npm test```
+    ```npm run test-client```
 

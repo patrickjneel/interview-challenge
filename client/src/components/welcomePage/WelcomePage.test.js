@@ -6,7 +6,7 @@ describe('Welcome Page Tests', () => {
 
   it('should match snapshot', () => {
     const mockFunc = jest.fn();
-    const renderedWelcomePage = shallow(<WelcomePage scroll={mockFunc}/>)
+    const renderedWelcomePage = shallow(<WelcomePage scroll={mockFunc}/>);
 
     expect(renderedWelcomePage).toMatchSnapshot();
   });

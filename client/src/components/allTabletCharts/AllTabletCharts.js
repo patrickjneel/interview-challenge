@@ -1,5 +1,6 @@
 import React from 'react';
 import TabletPieCost from '../tabletCharts/TabletPieChartClick';
+import PropTypes from 'prop-types';
 
 const AllTabletCharts = ({ hours, cost, data }) => {
   return (
@@ -14,3 +15,9 @@ const AllTabletCharts = ({ hours, cost, data }) => {
 };
 
 export default AllTabletCharts;
+
+AllTabletCharts.propTypes = {
+  data: PropTypes.array,
+  cost: PropTypes.array,
+  hours: PropTypes.array
+};

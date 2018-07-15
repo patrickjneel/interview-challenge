@@ -1,9 +1,9 @@
 import React from 'react';
 import MobileLineChartCPC from '../mobileCharts/MobileLineChartCPC';
 import MobileBarChartMax from '../mobileCharts/MobileBarChartMax';
+import PropTypes from 'prop-types';
 
 const AllMobileCharts = ({ data, hours, max }) => {
-  
   return (
     <div>
       <h1 className='event-desc'>Mobile Charts</h1>
@@ -13,7 +13,13 @@ const AllMobileCharts = ({ data, hours, max }) => {
       <MobileLineChartCPC className='mobile-view' data={data} hours={hours} />
       <MobileBarChartMax hours={hours} max={max} />
     </div>
-  )
+  );
 };
 
 export default AllMobileCharts;
+
+AllMobileCharts.propTypes = {
+  data: PropTypes.array,
+  hours: PropTypes.array,
+  max: PropTypes.array
+};

@@ -16,7 +16,7 @@ const fetchData = async () => {
       maxImpressions: data.maxImpressions,
       searchImpressionShare: data.searchImpressionShare,
       conversions: data.conversions
-    }
+    };
   });
 };
 

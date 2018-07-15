@@ -19,9 +19,9 @@ describe('App Test', () => {
   it('should have a state of data set to an empty array', () => {
     const renderedApp = shallow(<App />);
 
-    expect(renderedApp.state()).toEqual({ data: [] })
-    expect(renderedApp.state().data).toEqual(expect.arrayContaining([]))
-  })
-})
+    expect(renderedApp.state()).toEqual({ data: [] });
+    expect(renderedApp.state().data).toEqual(expect.arrayContaining([]));
+  });
+});
 
 //console.log( component.debug() );

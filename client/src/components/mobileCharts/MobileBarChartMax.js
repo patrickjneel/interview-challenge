@@ -1,71 +1,62 @@
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import PropTypes from 'prop-types';
 
 const MobileChartMax = ({ hours, max }) => {
 
   const options = {
-
     chart: {
-     width: '800',
-     height: '450',
-     type: 'column',
+      width: '800',
+      height: '450',
+      type: 'column',
     },
-
     title: {
       text: 'Max Impressions'
     },
-
     yAxis: {
       title: {
-      text: 'Number of Max Impressions'
-    }
+        text: 'Number of Max Impressions'
+      }
     },
-
     legend: {
       layout: 'vertical',
       align: 'right',
       verticalAlign: 'middle'
     },
-
     xAxis: {
       title: {
         text: 'Hour of Day',
+      },
+      categories: hours
     },
-
-    categories: hours
-    },
-
     plotOptions: {
       series: {
-      allowPointSelect: true
-    }
-  },
+        allowPointSelect: true
+      }
+    },
+    series: [
+      {
+        name: 'Max Impressions Throughout Day',
+        data: max
+      },
+    ],
+  };
 
-  series: [
+  const responsive = Object.assign({}, options, 
     {
-      name: 'Max Impressions Throughout Day',
-      data: max
-    },
-  ],
-
-};
-
-const responsive = Object.assign({}, options, 
-              {
-    chart: {
-     width: '400',
-     height: '450',
-     type: 'column',
-    },
-
-    legend: {
-      align: 'center',
-      verticalAlign: 'bottom',
-      layout: 'horizontal'
-    },
-  }
-);
+      chart: {
+        width: '400',
+        height: '450',
+        type: 'column',
+      },
+      legend: {
+        align: 'center',
+        verticalAlign: 'bottom',
+        layout: 'horizontal'
+      },
+    }
+  );
 
   if(window.innerWidth < 825) {
     return (
@@ -89,3 +80,8 @@ const responsive = Object.assign({}, options,
 };
 
 export default MobileChartMax;
+
+MobileChartMax.propTypes = {
+  hours: PropTypes.array,
+  max: PropTypes.array
+};

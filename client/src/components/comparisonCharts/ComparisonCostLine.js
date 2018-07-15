@@ -1,66 +1,65 @@
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import PropTypes from 'prop-types';
 
 const ComparisonCostLine = ({ data }) => {
 
-const hours = data.map(hours => hours.hourOfDay).reverse()
-
-const mobileCost = data.filter(mobile => mobile.device === 'Mobile devices with full browsers').map(cost => cost.cost).reverse()
-
-const tabletCost = data.filter(tablet => tablet.device === 'Tablets with full browsers').map(cost => cost.cost).reverse()
+  const hours = data.map(hours => hours.hourOfDay).sort((a,b) => a - b);
+  const mobileCost = data.filter(mobile => mobile.device === 'Mobile devices with full browsers').map(cost => cost.cost).reverse();
+  const tabletCost = data.filter(tablet => tablet.device === 'Tablets with full browsers').map(cost => cost.cost).reverse();
 
   const options = {
     chart: {
-        type: 'line',
-        width: '800',
-        height: '450'
+      type: 'line',
+      width: '800',
+      height: '450'
     },
     title: {
-        text: 'Cost'
+      text: 'Cost'
     },
-    
     xAxis: {
-        categories: hours,
-        title: {
-            text: 'Hour of Day'
-        },
+      ordinal: false,
+      tickInterval: 2,
+      categories: hours,
+      title: {
+        text: 'Hour of Day'
+      },
     },
     yAxis: {
-        title: {
-            text: 'Cost'
-        }
+      title: {
+        text: 'Cost'
+      }
     },
     plotOptions: {
-        line: {
-            dataLabels: {
-                enabled: true
-            },
-        }
+      line: {
+        dataLabels: {
+          enabled: true
+        },
+      }
     },
     series: [{
-        name: 'Mobile',
-        data: mobileCost
+      name: 'Mobile',
+      data: mobileCost
     }, {
-        name: 'Tablet',
-        data: tabletCost
+      name: 'Tablet',
+      data: tabletCost
     }]
-  }
+  };
 
   const responsive = Object.assign({}, options, 
-              {
-    chart: {
-     width: '400',
-     height: '450',
-    },
-
-    legend: {
-      align: 'center',
-      verticalAlign: 'bottom',
-      layout: 'horizontal'
-    },
-  }
-);
+    {
+      chart: {
+        width: '400',
+        height: '450',
+      },
+      legend: {
+        align: 'center',
+        verticalAlign: 'bottom',
+        layout: 'horizontal'
+      },
+    }
+  );
 
   if(window.innerWidth < 825) {
     return (
@@ -80,8 +79,12 @@ const tabletCost = data.filter(tablet => tablet.device === 'Tablets with full br
         options={options}
       />
     </div>
-  )
+  );
 };
 
-export default ComparisonCostLine
+export default ComparisonCostLine;
+
+ComparisonCostLine.propTypes = {
+  data: PropTypes.array
+};
 

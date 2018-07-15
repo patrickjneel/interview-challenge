@@ -9,12 +9,12 @@ class App extends Component {
     super();
     this.state = {
       data: []
-    }
+    };
   }
 
   async componentDidMount() {
     const data = await fetchData();
-    this.setState({ data })
+    this.setState({ data });
   }
 
   scroll = (event) => {
@@ -24,8 +24,8 @@ class App extends Component {
       ['View Mobile Data']: document.querySelector('.charts'),
       ['View Tablet Data']: document.querySelector('.tablet-view'),
       ['View Comparison Data']: document.querySelector('.comparison-view')
-    }
-    sections[sectionTarget].scrollIntoView({ behavior: "smooth", block: 'start' })
+    };
+    sections[sectionTarget].scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   render() {
@@ -37,7 +37,7 @@ class App extends Component {
         </div>
       </div>
     );
-  };
-};
+  }
+}
 
 export default App;

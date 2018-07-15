@@ -6,7 +6,7 @@ describe('Chart Area Test', () => {
 
   it('should match snap shot', () => {
     const mockData = [];
-    const renderedChartArea = shallow(<ChartArea data={mockData}/>)
+    const renderedChartArea = shallow(<ChartArea data={mockData}/>);
     
     expect(renderedChartArea).toMatchSnapshot();
   });

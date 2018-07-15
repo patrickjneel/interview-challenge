@@ -1,5 +1,6 @@
 import React from 'react';
 import './welcome-page.css';
+import PropTypes from 'prop-types';
 
 const WelcomePage = ({ scroll }) => {
   return (
@@ -13,9 +14,13 @@ const WelcomePage = ({ scroll }) => {
         <img className='logo' src={require('../../assets/creative.svg')} />
         <h3 className='data-desc' onClick={scroll}>View Tablet Data</h3>
       </div>
-        <h3 className='data-desc' onClick={scroll}>View Comparison Data</h3>
+      <h3 className='data-desc' onClick={scroll}>View Comparison Data</h3>
     </div>
-  )
+  );
 };
 
 export default WelcomePage;
+
+WelcomePage.propTypes = {
+  scroll: PropTypes.func
+};
