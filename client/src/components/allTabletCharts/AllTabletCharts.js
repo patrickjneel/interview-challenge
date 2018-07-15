@@ -1,17 +1,17 @@
 import React from 'react';
-import TabletPieCost from '../tabletCharts/TabletPieChartClick';
+import TabletBarCost from '../tabletCharts/TabletBarCost';
 import TabletPieSearch from '../tabletCharts/TabletPieChartSearch';
 import PropTypes from 'prop-types';
 
-const AllTabletCharts = ({ data, cost, search }) => {
+const AllTabletCharts = ({ data, cost, search, hours }) => {
   return (
     <div>
       <h1 className='event-desc tablet-view'>Tablet Charts</h1>
       <h3 className='event-desc'>Day: {data[0].dayOfWeek}</h3>
       <h3 className='event-desc'>Event: {data[0].campaignName}</h3>
       <h3 className='event-desc'>Device: {data[0].device}</h3>
-      <TabletPieCost cost={cost} />
-      <TabletPieSearch search={search} />
+      <TabletBarCost cost={cost} />
+      <TabletPieSearch search={search} hours={hours} />
     </div>
   );
 };
