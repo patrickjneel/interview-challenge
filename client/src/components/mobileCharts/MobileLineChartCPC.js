@@ -75,6 +75,7 @@ if(window.innerWidth < 825) {
       </div>
     );
   }
+  
   return (
    <div className='chart-container'>
      <HighchartsReact 
