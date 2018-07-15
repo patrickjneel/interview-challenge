@@ -15,8 +15,6 @@ const TabletBarCost = ({ cost, hours }) => {
       text: 'Cost Throughout Day'
     },
     xAxis: {
-      min: 0,
-      max: 23,
       tickInterval: 1,
       categories: hours,
       title: {
