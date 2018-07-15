@@ -3,8 +3,8 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import PropTypes from 'prop-types';
 
-const TabletPieCost = ({ cost }) => {
-
+const TabletPieSearch = ({ search }) => {
+  
   const options = {
     chart: {
       type: 'pie',
@@ -12,7 +12,7 @@ const TabletPieCost = ({ cost }) => {
       height: '450'
     },
     title: {
-      text: 'Cost Throughout Day'
+      text: 'Search Impressions'
     },
     tooltip: {
       pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -32,49 +32,49 @@ const TabletPieCost = ({ cost }) => {
       colorByPoint: true,
       data: [{
         name: '12am',
-        y: cost[0],
+        y: search[0]
       }, 
       {
         name: '10am',
-        y: cost[1]
+        y: search[1]
       }, 
       {
         name: '11am',
-        y: cost[2]
+        y: search[2]
       }, 
       {
         name: '1pm',
-        y:cost[3]
+        y: search[3]
       }, 
       {
         name: '2pm',
-        y: cost[4]
+        y: search[4]
       },
       {
         name: '4pm',
-        y: cost[5]
+        y: search[5]
       }, 
       {
         name: '5pm',
-        y: cost[6]
+        y: search[6]
       }, 
       {
         name: '6pm',
-        y: cost[7]
+        y: search[7]
       },
       {
         name: '7pm',
-        y: cost[8]
+        y: search[8]
       },
       {
         name: '8pm',
-        y: cost[9]
+        y: search[9]
       },   
       {
         name: '11pm',
-        y: cost[10]
-      }]
-    }]
+        y: search[10]
+      }],
+    }],
   };
 
   const responsive = Object.assign({}, options, 
@@ -112,9 +112,8 @@ const TabletPieCost = ({ cost }) => {
   );
 };
 
-export default TabletPieCost;
+export default TabletPieSearch;
 
-TabletPieCost.propTypes = {
-  hours: PropTypes.array,
-  cost: PropTypes.array
+TabletPieSearch.propTypes = {
+  search: PropTypes.array
 };
