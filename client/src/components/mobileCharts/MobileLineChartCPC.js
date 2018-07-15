@@ -49,6 +49,32 @@ const options = {
     },
   ],
 };
+
+const responsive = Object.assign({}, options, 
+              {
+    chart: {
+     width: '400',
+     height: '450',
+    },
+
+    legend: {
+      align: 'center',
+      verticalAlign: 'bottom',
+      layout: 'horizontal'
+    },
+  }
+);
+
+if(window.innerWidth < 825) {
+    return (
+      <div className='chart-container'>
+        <HighchartsReact
+          highcharts={Highcharts}
+          options={responsive}
+        />
+      </div>
+    );
+  }
   return (
    <div className='chart-container'>
      <HighchartsReact 

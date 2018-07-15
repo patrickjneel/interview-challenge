@@ -50,7 +50,6 @@ class App extends Component {
   };
 };
 
-//change chart so not much shit going on
 //table view of the data-
 
 export default App;

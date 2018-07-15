@@ -64,18 +64,18 @@ const responsive = Object.assign({}, options,
       verticalAlign: 'bottom',
       layout: 'horizontal'
     },
-}
+  }
 );
 
   if(window.innerWidth < 825) {
     return (
-    <div className='chart-container'>
-      <HighchartsReact
-        highcharts={Highcharts}
-        options={responsive}
-      />
-    </div>
-  );
+      <div className='chart-container'>
+        <HighchartsReact
+          highcharts={Highcharts}
+          options={responsive}
+        />
+      </div>
+    );
   }
 
   return (
