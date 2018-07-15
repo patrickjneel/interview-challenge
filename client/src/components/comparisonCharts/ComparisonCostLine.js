@@ -4,18 +4,20 @@ import HighchartsReact from 'highcharts-react-official';
 
 const ComparisonCostLine = ({ data }) => {
 
-let hours = data.map(hours => hours.hourOfDay).reverse()
+const hours = data.map(hours => hours.hourOfDay).reverse()
 
-let mobileCost = data.filter(mobile => mobile.device === 'Mobile devices with full browsers').map(cost => cost.cost).reverse()
+const mobileCost = data.filter(mobile => mobile.device === 'Mobile devices with full browsers').map(cost => cost.cost).reverse()
 
-let tabletCost = data.filter(tablet => tablet.device === 'Tablets with full browsers').map(cost => cost.cost).reverse()
+const tabletCost = data.filter(tablet => tablet.device === 'Tablets with full browsers').map(cost => cost.cost).reverse()
 
-  let options = {
+  const options = {
     chart: {
         type: 'line',
+        width: '800',
+        height: '450'
     },
     title: {
-        text: 'Cost between Mobile Devices and Tablets'
+        text: 'Cost'
     },
     
     xAxis: {

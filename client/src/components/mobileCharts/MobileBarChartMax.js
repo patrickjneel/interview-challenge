@@ -4,7 +4,7 @@ import HighchartsReact from 'highcharts-react-official';
 
 const MobileChartMax = ({ hours, max }) => {
 
-  let options = {
+  const options = {
 
     chart: {
      width: '800',
@@ -13,7 +13,7 @@ const MobileChartMax = ({ hours, max }) => {
     },
 
     title: {
-      text: 'Max Impressions Throughout Day'
+      text: 'Max Impressions'
     },
 
     yAxis: {
@@ -50,7 +50,8 @@ const MobileChartMax = ({ hours, max }) => {
   ],
 
 };
-let responsive = Object.assign({}, options, 
+
+const responsive = Object.assign({}, options, 
               {
     chart: {
      width: '400',

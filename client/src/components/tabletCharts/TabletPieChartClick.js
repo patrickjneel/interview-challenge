@@ -4,12 +4,14 @@ import HighchartsReact from 'highcharts-react-official';
 
 const TabletPieCost = ({ hours, cost }) => {
 
-  let options = {
+  const options = {
   chart: {
         plotBackgroundColor: null,
         plotBorderWidth: null,
         plotShadow: false,
-        type: 'pie'
+        type: 'pie',
+        width: '800',
+        height: '450'
     },
     title: {
         text: 'Cost Throughout Day'

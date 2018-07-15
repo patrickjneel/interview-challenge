@@ -50,10 +50,6 @@ class App extends Component {
   };
 };
 
-//change lets to const 
-//break out chart area to smaller components
-//change color for each deifferent section
-//Put section headers
 //change chart so not much shit going on
 //table view of the data-
 

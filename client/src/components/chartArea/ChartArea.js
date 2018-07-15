@@ -1,46 +1,35 @@
 import React from 'react';
-import MobileLineChartCPC from '../mobileCharts/MobileLineChartCPC';
-import MobileBarChartMax from '../mobileCharts/MobileBarChartMax';
 import './chart-area.css';
-import TabletPieCost from '../tabletCharts/TabletPieChartClick';
-import ComparisonCostLine from '../comparisonCharts/ComparisonCostLine';
-import ComparisonAvgPosBar from '../comparisonCharts/ComparisonAvgPosBar';
-import moment from 'moment'
+import AllMobileCharts from '../allMobileCharts/AllMobileCharts';
+import AllTabletCharts from '../allTabletCharts/AllTabletCharts';
+import AllComparisonCharts from '../allComparisonCharts/AllComparisonCharts';
 
-const ChartArea = ({data}) => {
+const ChartArea = ({ data }) => {
 
-  let mobileData = data.filter(mobile => mobile.device === 'Mobile devices with full browsers')
-  let mobileHours = mobileData.map(hour => hour.hourOfDay).reverse()
-  let maxImpressions = mobileData.map(mobile => mobile.maxImpressions).reverse()
+  const mobileData = data.filter(mobile => mobile.device === 'Mobile devices with full browsers')
+  const mobileHours = mobileData.map(hour => hour.hourOfDay).reverse()
+  const maxImpressions = mobileData.map(mobile => mobile.maxImpressions).reverse()
+  const tabletData = data.filter(mobile => mobile.device === 'Tablets with full browsers')
+  const tabletHours = tabletData.map(hour => hour.hourOfDay).reverse()
 
-  
-  let tabletData = data.filter(mobile => mobile.device === 'Tablets with full browsers')
-  let tabletHours = tabletData.map(hour => hour.hourOfDay).reverse()
-
-  let cost = tabletData.map(cost => cost.cost).reverse()
+  const cost = tabletData.map(cost => cost.cost).reverse()
      
   if(!data.length) {
     return <div>loading</div>
   }
   return (
     <div className='chart-area'>
-      <h3 className='event-desc'>Day: {data[0].dayOfWeek}</h3>
-      <h3 className='event-desc'>Event: {data[0].campaignName}</h3>
-      <h3 className='event-desc'>Device: {data[18].device}</h3>
-      <MobileLineChartCPC className='mobile-view' data={data} hours={mobileHours} />
-      <MobileBarChartMax hours={mobileHours} max={maxImpressions} />
-      <h3 className='event-desc tablet-view'>Day: {data[0].dayOfWeek}</h3>
-      <h3 className='event-desc'>Event: {data[0].campaignName}</h3>
-      <h3 className='event-desc'>Device: {data[0].device}</h3>
-      <TabletPieCost hours={tabletHours} cost={cost} />
-      <h3 className='event-desc comparison-view' >Day: {data[0].dayOfWeek}</h3>
-      <h3 className='event-desc'>Event: {data[0].campaignName}</h3>
-      <h3 className='event-desc'>Comparion Between Mobile & Tablets</h3>
-      <ComparisonCostLine data={data} />
-      <ComparisonAvgPosBar data={data} />
+      <div className='all-mobile'>
+        <AllMobileCharts data={data} hours={mobileHours} max={maxImpressions} />
+      </div>
+      <div className='all-tablet'>
+        <AllTabletCharts data={data} hours={tabletHours} cost={cost} />
+      </div>
+      <div className='all-comparison'>
+        <AllComparisonCharts data={data} />
+      </div>
     </div>
   );
 };
 
 export default ChartArea;
-

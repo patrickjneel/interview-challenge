@@ -14,10 +14,8 @@
 }
 
 .charts {
-  background-color: #b5c4d1;
   display: flex;
   justify-content: center;
-  padding-top: 10px;
   opacity: 0.90;
 }
 
@@ -52,7 +50,7 @@
   color: #efefef;
   font-weight: 300;
   cursor: pointer;
-  text-decoration: underline red;
+  text-decoration: underline #f7941d;
 }
 
 .data-desc:hover {

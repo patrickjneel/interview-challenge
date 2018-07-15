@@ -3,17 +3,18 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
 const MobileLineChart = ({ data, hours }) => {
-let mobileData = data.filter(mobile => mobile.device === 'Mobile devices with full browsers')
-let cpc = mobileData.map(mobile => mobile.avgCpc).reverse()
+  
+const mobileData = data.filter(mobile => mobile.device === 'Mobile devices with full browsers')
+const cpc = mobileData.map(mobile => mobile.avgCpc).reverse()
 
-let options = {
+const options = {
   chart: {
     width: '800',
     height: '450'
   },
 
   title: {
-    text: 'Average Click Per Cost Throughout Day'
+    text: 'Average Click Per Cost'
   },
 
   yAxis: {

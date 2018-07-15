@@ -2,8 +2,30 @@
   color: #6b6b6b;
 }
 
+.chart-area {
+  width: 100%;
+}
+
 .chart-container {
   padding: 10px 0px;
+}
+
+.all-mobile {
+  background-color: #b5c4d1;;
+  display: flex;
+  justify-content: center;
+}
+
+.all-tablet {
+  background-color: #afafaf;
+  display: flex;
+  justify-content: center;
+}
+
+.all-comparison {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 425px) {
