@@ -2,14 +2,13 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import PropTypes from 'prop-types';
+import dataCleaner from './DataCleaner'
 
 const ComparisonAvgPosBar = ({ data }) => {
 
-  const hours = data.map(hours => hours.hourOfDay).reverse();
-  const sortHours = data.map(hours => hours.hourOfDay).sort((a,b) => a - b);
-  const mobileAvgPos = data.filter(mobile => mobile.device === 'Mobile devices with full browsers').map(avg => avg.avgPosition).reverse();
-  const tabletAvgPos = data.filter(tablet => tablet.device === 'Tablets with full browsers').map(avg => avg.avgPosition).reverse();
-
+  const mobileMaxData = dataCleaner(data, 'mobile', 'max');
+  const tabletMaxData = dataCleaner(data, 'tablet', 'max');
+  
   const options = {
     chart: {
       type: 'column',
@@ -20,7 +19,9 @@ const ComparisonAvgPosBar = ({ data }) => {
       text: 'Avgerage Position'
     },
     xAxis: {
-      categories: sortHours,
+      min: 0,
+      max: 23,
+      tickInterval: 1,
       crosshair: true,
       title: {
         text: 'Hour of Day'
@@ -48,10 +49,10 @@ const ComparisonAvgPosBar = ({ data }) => {
     },
     series: [{
       name: 'Mobile',
-      data: mobileAvgPos
+      data: mobileMaxData
     }, {
       name: 'Tablet',
-      data: tabletAvgPos
+      data: tabletMaxData
     }]
   };
 

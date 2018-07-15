@@ -2,13 +2,13 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import PropTypes from 'prop-types';
+import dataCleaner from './DataCleaner';
 
 const ComparisonCostLine = ({ data }) => {
-
-  const hours = data.map(hours => hours.hourOfDay).sort((a,b) => a - b);
-  const mobileCost = data.filter(mobile => mobile.device === 'Mobile devices with full browsers').map(cost => cost.cost).reverse();
-  const tabletCost = data.filter(tablet => tablet.device === 'Tablets with full browsers').map(cost => cost.cost).reverse();
-
+  const mobileCostData = dataCleaner(data, 'mobile', 'cost');
+  const tabletCostData = dataCleaner(data, 'tablet', 'cost');
+  
+  
   const options = {
     chart: {
       type: 'line',
@@ -18,10 +18,11 @@ const ComparisonCostLine = ({ data }) => {
     title: {
       text: 'Cost'
     },
+    
     xAxis: {
-      ordinal: false,
-      tickInterval: 2,
-      categories: hours,
+      min: 0,
+      max: 23,
+      tickInterval: 1,
       title: {
         text: 'Hour of Day'
       },
@@ -32,6 +33,9 @@ const ComparisonCostLine = ({ data }) => {
       }
     },
     plotOptions: {
+      series: {
+        connectNulls: true,
+      },
       line: {
         dataLabels: {
           enabled: true
@@ -40,10 +44,10 @@ const ComparisonCostLine = ({ data }) => {
     },
     series: [{
       name: 'Mobile',
-      data: mobileCost
+      data: mobileCostData
     }, {
       name: 'Tablet',
-      data: tabletCost
+      data: tabletCostData
     }]
   };
 

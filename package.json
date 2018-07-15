@@ -9,8 +9,7 @@
     "dev": "npm-run-all --parallel dev-*",
     "build": "npm run build-fe && npm run dev-start-be",
     "build-fe": "cd client && npm run build",
-    "test-client": "cd client && npm run test",
-    "client-eslint": "cd client && npm run eslint"
+    "test-client": "cd client && npm run test"
   },
   "author": "AdCellerant",
   "license": "ISC",
