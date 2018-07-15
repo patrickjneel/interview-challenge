@@ -13,6 +13,12 @@ module.exports = {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
+    "globals": {
+        "describe": false,
+        "it": false,
+        "expect": false,
+        "jest": false
+    },
     "plugins": [
         "react"
     ],

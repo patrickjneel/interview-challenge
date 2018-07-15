@@ -37,3 +37,7 @@ Instructions For Running
     
     ```npm run test-client```
 
+5. To run linter
+  
+    ```npm run client-eslint```
+

@@ -2,12 +2,12 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import PropTypes from 'prop-types';
-import dataCleaner from './DataCleaner'
+import dataCleaner from './DataCleaner';
 
 const ComparisonAvgPosBar = ({ data }) => {
 
-  const mobileMaxData = dataCleaner(data, 'mobile', 'max');
-  const tabletMaxData = dataCleaner(data, 'tablet', 'max');
+  const mobileMaxData = dataCleaner(data, 'mobile', 'avgPos');
+  const tabletMaxData = dataCleaner(data, 'tablet', 'avgPos');
   
   const options = {
     chart: {

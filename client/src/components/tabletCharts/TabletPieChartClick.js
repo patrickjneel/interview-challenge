@@ -2,8 +2,8 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import PropTypes from 'prop-types';
+const TabletPieCost = ({ cost }) => {
 
-const TabletPieCost = ({ hours, cost }) => {
 
   const options = {
     chart: {
