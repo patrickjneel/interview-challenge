@@ -5,8 +5,7 @@ import App from './App';
 describe('App Test', () => {
 
   it('should be defined', () => {
-    const mockData = []
-    const renderedApp = shallow(<App data={mockData}/>);
+    const renderedApp = shallow(<App />);
 
     expect(renderedApp).toBeDefined();
   });
@@ -16,4 +15,13 @@ describe('App Test', () => {
 
     expect(renderedApp).toMatchSnapshot();
   });
+
+  it('should have a state of data set to an empty array', () => {
+    const renderedApp = shallow(<App />);
+
+    expect(renderedApp.state()).toEqual({ data: [] })
+    expect(renderedApp.state().data).toEqual(expect.arrayContaining([]))
+  })
 })
+
+//console.log( component.debug() );
