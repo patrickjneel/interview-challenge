@@ -1,4 +1,4 @@
-const CleanData = (data, device, property) => {
+const CleanDataForComparisons = (data, device, property) => {
   const filterString = {mobile: 'Mobile devices with full browsers', tablet: 'Tablets with full browsers' };
   const filterProperty = { cost: 'cost', avgPos: 'avgPosition' };
   const deviceFilter = data.filter(filterDevice => filterDevice.device === filterString[device]).reverse();
@@ -16,6 +16,6 @@ const CleanData = (data, device, property) => {
   return nullCost;
 };
 
-export default CleanData;
+export default CleanDataForComparisons;
 
 
