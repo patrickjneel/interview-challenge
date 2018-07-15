@@ -11,7 +11,7 @@ const AllComparisonCharts = ({ data }) => {
       </h1>
       <h3 className='event-desc' >Day: {data[0].dayOfWeek}</h3>
       <h3 className='event-desc'>Event: {data[0].campaignName}</h3>
-      <h3 className='event-desc'>Comparion Between Mobile & Tablets</h3>
+      <h3 className='event-desc'>Comparison Between Mobile & Tablets</h3>
       <ComparisonCostLine data={data} />
       <ComparisonAvgPosBar data={data} />
     </div>
