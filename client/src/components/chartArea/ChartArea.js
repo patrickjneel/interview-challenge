@@ -3,6 +3,8 @@ import './chart-area.css';
 import AllMobileCharts from '../allMobileCharts/AllMobileCharts';
 import AllTabletCharts from '../allTabletCharts/AllTabletCharts';
 import AllComparisonCharts from '../allComparisonCharts/AllComparisonCharts';
+import MobileTable from '../mobileTable/MobileTable';
+import TabletTable from '../tabletTable/TabletTable';
 import PropTypes from 'prop-types';
 
 const ChartArea = ({ data }) => {
@@ -28,6 +30,12 @@ const ChartArea = ({ data }) => {
       </div>
       <div className='all-comparison'>
         <AllComparisonCharts data={data} />
+      </div>
+      <div className='mobile-table'>
+        <MobileTable mobileData={mobileData} />
+      </div>
+      <div className='tablet-table'>
+        <TabletTable tabletData={tabletData} />
       </div>
     </div>
   );

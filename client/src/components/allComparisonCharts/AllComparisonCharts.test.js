@@ -9,7 +9,7 @@ describe('All Comparison Charts Tests', () => {
     const mockData = [0];
     const renderedAllComparisonCharts = shallow(
       <AllComparisonCharts 
-          data={mockData}
+        data={mockData}
       />
     );
 

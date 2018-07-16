@@ -11,10 +11,10 @@ describe('All Tablet Charts Tests', () => {
     const mockHours = [];
     const renderedAllTabletCharts = shallow(
       <AllTabletCharts 
-          data={mockData}
-          cost={mockCost}
-          search={mockSearch}
-          hours={mockHours}
+        data={mockData}
+        cost={mockCost}
+        search={mockSearch}
+        hours={mockHours}
       />
     );
 

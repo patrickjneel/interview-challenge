@@ -1,9 +1,10 @@
 import React from 'react';
-import './mobile-table.css';
 import PropTypes from 'prop-types';
 
-const MobileTable = ({ mobileData }) => {
-  const elements = mobileData.reverse().map(heading => {
+const TabletTable = ({ tabletData }) => {
+
+  const elements = tabletData.reverse().map(heading => {
+    
     return (
       <tr>
         <td>{heading.hourOfDay}</td>
@@ -21,7 +22,7 @@ const MobileTable = ({ mobileData }) => {
 
   return (
     <div className='chart'>
-      <h1 className='event-desc'>Mobile Data For Tampa Boat Show</h1>
+      <h1 className='event-desc'>Tablet Data For Tampa Boat Show</h1>
       <table>
         <tbody>
           <tr>
@@ -42,8 +43,8 @@ const MobileTable = ({ mobileData }) => {
   );
 };
 
-export default MobileTable;
+export default TabletTable;
 
-MobileTable.propTypes = {
-  mobileData: PropTypes.array
+TabletTable.propTypes = {
+  tabletData: PropTypes.array
 };

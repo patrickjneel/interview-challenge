@@ -28,6 +28,27 @@
   justify-content: center;
 }
 
+.mobile-table {
+  background-color: #b5c4d1;
+  display: flex;
+  justify-content: center;
+}
+
+.tablet-table {
+  background-color: #afafaf;
+  display: flex;
+  justify-content: center;
+}
+
+@media(max-width: 995px) {
+  .mobile-table {
+    display: none;
+  }
+  .tablet-table {
+    display: none;
+  }
+}
+
 @media (max-width: 425px) {
   .event-desc {
     font-size: 15px;
