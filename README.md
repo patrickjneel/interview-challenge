@@ -3,19 +3,7 @@ Pat Neel's AdCellerant challenge
 
 Hello!
 
-Thank you for your interest in the AdCellerant engineering team! This is an open ended challenge
-giving you full creative license to do as you please. We have set up for you a very simple node
-server serving up some JSON at `localhost:3000/data`. Your task is to display this data in an interesting
-and efficient way using whichever technology you're comfortable with. We're looking for fluency in javascript,
-appropriate use of markup, and responsive styling. When you've completed this challenge create a pull request,
-update the README on how to get your submission running, and our engineering team will review it.
-
-
-Bonus Points for:
-
-- Tests
-- Interactive Charts
-- React/Angular 
+Here is my submission. I really enjoyed working on this challenge and am proud of what I put together. The charts are not dynamically responsiveness. If you shrink down the screen, and then refresh they will be sized for a mobile screen. I started refactoring using my DataCleaner function, and had a few more things to get to, but didn't have quite enough time. I have two eslint errors "Each child in an array or iterator should have a unique "key" prop." I tried taking in the index, and using Date.now(). Since I was returning a new ```<tr>``` every child had the same id and did not like that. Let me know if you need anything else at patrickj.neel@gmail.com. Thanks again!
 
 Instructions For Running
 ------------------------
