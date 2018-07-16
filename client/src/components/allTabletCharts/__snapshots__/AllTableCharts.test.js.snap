@@ -1,0 +1,293 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`All Tablet Charts Tests should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AllTabletCharts
+    cost={Array []}
+    data={
+        Array [
+            0,
+          ]
+    }
+    hours={Array []}
+    search={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="event-desc tablet-view"
+>
+          Tablet Charts
+</h1>,
+        <h3
+          className="event-desc"
+>
+          Day: 
+</h3>,
+        <h3
+          className="event-desc"
+>
+          Event: 
+</h3>,
+        <h3
+          className="event-desc"
+>
+          Device: 
+</h3>,
+        <TabletBarCost
+          cost={Array []}
+/>,
+        <TabletPieSearch
+          hours={Array []}
+          search={Array []}
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Tablet Charts",
+          "className": "event-desc tablet-view",
+        },
+        "ref": null,
+        "rendered": "Tablet Charts",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Day: ",
+            undefined,
+          ],
+          "className": "event-desc",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Day: ",
+          undefined,
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Event: ",
+            undefined,
+          ],
+          "className": "event-desc",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Event: ",
+          undefined,
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Device: ",
+            undefined,
+          ],
+          "className": "event-desc",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Device: ",
+          undefined,
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "cost": Array [],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "hours": Array [],
+          "search": Array [],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="event-desc tablet-view"
+>
+            Tablet Charts
+</h1>,
+          <h3
+            className="event-desc"
+>
+            Day: 
+</h3>,
+          <h3
+            className="event-desc"
+>
+            Event: 
+</h3>,
+          <h3
+            className="event-desc"
+>
+            Device: 
+</h3>,
+          <TabletBarCost
+            cost={Array []}
+/>,
+          <TabletPieSearch
+            hours={Array []}
+            search={Array []}
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Tablet Charts",
+            "className": "event-desc tablet-view",
+          },
+          "ref": null,
+          "rendered": "Tablet Charts",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Day: ",
+              undefined,
+            ],
+            "className": "event-desc",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Day: ",
+            undefined,
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Event: ",
+              undefined,
+            ],
+            "className": "event-desc",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Event: ",
+            undefined,
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Device: ",
+              undefined,
+            ],
+            "className": "event-desc",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Device: ",
+            undefined,
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "cost": Array [],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "hours": Array [],
+            "search": Array [],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;

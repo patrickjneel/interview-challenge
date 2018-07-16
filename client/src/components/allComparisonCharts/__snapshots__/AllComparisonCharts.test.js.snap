@@ -1,0 +1,298 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`All Comparison Charts Tests should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <AllComparisonCharts
+    data={
+        Array [
+            0,
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="event-desc comparison-view"
+>
+          Mobile and Tablet Comparisons
+</h1>,
+        <h3
+          className="event-desc"
+>
+          Day: 
+</h3>,
+        <h3
+          className="event-desc"
+>
+          Event: 
+</h3>,
+        <h3
+          className="event-desc"
+>
+          Comparison Between Mobile & Tablets
+</h3>,
+        <ComparisonCostLine
+          data={
+                    Array [
+                              0,
+                            ]
+          }
+/>,
+        <ComparisonAvgPosBar
+          data={
+                    Array [
+                              0,
+                            ]
+          }
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Mobile and Tablet Comparisons",
+          "className": "event-desc comparison-view",
+        },
+        "ref": null,
+        "rendered": "Mobile and Tablet Comparisons",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Day: ",
+            undefined,
+          ],
+          "className": "event-desc",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Day: ",
+          undefined,
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Event: ",
+            undefined,
+          ],
+          "className": "event-desc",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Event: ",
+          undefined,
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Comparison Between Mobile & Tablets",
+          "className": "event-desc",
+        },
+        "ref": null,
+        "rendered": "Comparison Between Mobile & Tablets",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "data": Array [
+            0,
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "data": Array [
+            0,
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="event-desc comparison-view"
+>
+            Mobile and Tablet Comparisons
+</h1>,
+          <h3
+            className="event-desc"
+>
+            Day: 
+</h3>,
+          <h3
+            className="event-desc"
+>
+            Event: 
+</h3>,
+          <h3
+            className="event-desc"
+>
+            Comparison Between Mobile & Tablets
+</h3>,
+          <ComparisonCostLine
+            data={
+                        Array [
+                                    0,
+                                  ]
+            }
+/>,
+          <ComparisonAvgPosBar
+            data={
+                        Array [
+                                    0,
+                                  ]
+            }
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Mobile and Tablet Comparisons",
+            "className": "event-desc comparison-view",
+          },
+          "ref": null,
+          "rendered": "Mobile and Tablet Comparisons",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Day: ",
+              undefined,
+            ],
+            "className": "event-desc",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Day: ",
+            undefined,
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Event: ",
+              undefined,
+            ],
+            "className": "event-desc",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Event: ",
+            undefined,
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Comparison Between Mobile & Tablets",
+            "className": "event-desc",
+          },
+          "ref": null,
+          "rendered": "Comparison Between Mobile & Tablets",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "data": Array [
+              0,
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "data": Array [
+              0,
+            ],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+    "disableLifecycleMethods": true,
+  },
+}
+`;
