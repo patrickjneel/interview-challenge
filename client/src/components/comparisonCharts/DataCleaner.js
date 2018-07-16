@@ -1,7 +1,15 @@
 const CleanDataForComparisons = (data, device, property) => {
   const filterString = {mobile: 'Mobile devices with full browsers', tablet: 'Tablets with full browsers' };
-  const filterProperty = { cost: 'cost', avgPos: 'avgPosition' };
+  
+  const filterProperty = { 
+    cost: 'cost', 
+    avgPos: 'avgPosition', 
+    cpc: 'avgCpc',
+    impressions: 'impressions' 
+  };
+
   const deviceFilter = data.filter(filterDevice => filterDevice.device === filterString[device]).reverse();
+
   const nullCost = deviceFilter.reduce((accu, number, index, array) => {
     const nextHour = array[index + 1] || { hourOfDay: 0};
     const hourGap = nextHour.hourOfDay - number.hourOfDay;

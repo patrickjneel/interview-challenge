@@ -28,7 +28,7 @@ const TabletPieSearch = ({ search }) => {
       }
     },
     series: [{
-      name: 'Time of Day',
+      name: 'Percentage',
       colorByPoint: true,
       data: [{
         name: '12am',

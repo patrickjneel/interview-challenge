@@ -1,13 +1,13 @@
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import dataCleaner from '../comparisonCharts/DataCleaner';
 import PropTypes from 'prop-types';
 
-const MobileLineChart = ({ data, hours }) => {
-  
-  const mobileData = data.filter(mobile => mobile.device === 'Mobile devices with full browsers');
-  const cpc = mobileData.map(mobile => mobile.avgCpc).reverse();
+const MobileLineChart = ({ data }) => {
 
+  const mobileCpcData = dataCleaner(data, 'mobile', 'cpc');
+  
   const options = {
     chart: {
       width: '800',
@@ -27,20 +27,21 @@ const MobileLineChart = ({ data, hours }) => {
       verticalAlign: 'middle'
     },
     xAxis: {
+      min: 0,
+      max: 23,
       title: {
         text: 'Hour of Day',
       },
-      categories: hours
     },
     plotOptions: {
       series: {
-        allowPointSelect: true
+        connectNulls: true,
       }
     },
     series: [
       {
         name: 'CPC Throughout Day',
-        data: cpc
+        data: mobileCpcData
       },
     ],
   };
@@ -83,6 +84,5 @@ const MobileLineChart = ({ data, hours }) => {
 export default MobileLineChart;
 
 MobileLineChart.propTypes = {
-  data: PropTypes.array,
-  hours: PropTypes.array
+  data: PropTypes.array
 };

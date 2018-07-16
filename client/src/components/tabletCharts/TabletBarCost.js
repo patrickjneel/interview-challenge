@@ -2,8 +2,11 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import PropTypes from 'prop-types';
+import dataCleaner from '../comparisonCharts/DataCleaner';
 
-const TabletBarCost = ({ cost, hours }) => {
+const TabletBarCost = ({ data }) => {
+
+  const tabletCostData = dataCleaner(data, 'tablet', 'impressions');
   
   const options = {
     chart: {
@@ -12,25 +15,26 @@ const TabletBarCost = ({ cost, hours }) => {
       type: 'bar'
     },
     title: {
-      text: 'Cost Throughout Day'
+      text: 'Impressions'
     },
     xAxis: {
+      min: 0,
+      max: 23,
       tickInterval: 1,
-      categories: hours,
       title: {
         text: 'Hour of Day'
       },
     },
     yAxis: {
       title: {
-        text: 'Cost in Dollars',
+        text: 'Number of Impressions',
         align: 'center'
       },
     },
     series: [{
       name: 'Cost',
       colorByPoint: true,
-      data: cost
+      data: tabletCostData
     }]
   };
 
@@ -72,6 +76,5 @@ const TabletBarCost = ({ cost, hours }) => {
 export default TabletBarCost;
 
 TabletBarCost.propTypes = {
-  hours: PropTypes.array,
-  cost: PropTypes.array
+  data: PropTypes.array
 };
