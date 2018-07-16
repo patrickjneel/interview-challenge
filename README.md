@@ -13,7 +13,7 @@ Instructions For Running
 
     ```npm install```
 
-3. Start the application for development
+3. Start the application
 
     ```npm run dev```
 
@@ -21,7 +21,7 @@ Instructions For Running
     
     ```npm run test-client```
 
-5. To run linter
+5. Run linter
   
     ```npm run client-eslint```
 
